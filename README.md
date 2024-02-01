@@ -1,2 +1,19 @@
 # bmi-geospatial-fortran
-Basic Model interface extension for geospatial data, Fortran version
+
+The Fortran specification for an example
+[Basic Model Interface](https://bmi.readthedocs.io) extension
+for geospatial data.
+
+The SIDL describing the interface for this example extension:
+```java
+package csdms version 0.0.1 {
+  interface bmi_geo {
+
+    int initialize(in string config_file);
+    int get_grid_coordinate_names(in int grid, out array<string, 1> names);
+    int get_grid_coordinate_units(in int grid, out array<string, 1> units);
+    int get_grid_coordinate(in int grid, int string coordinate, in array<double, 1> values);
+    int get_grid_crs(in int grid, out string name);
+  }
+}
+```
