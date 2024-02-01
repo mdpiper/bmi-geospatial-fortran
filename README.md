@@ -17,3 +17,10 @@ package csdms version 0.0.1 {
   }
 }
 ```
+
+Like the [Fortran specification for the core BMI](https://github.com/csdms/bmi-fortran),
+the code in this repository
+is used to define an abstract type, *bmi_geo*,
+that is intended to be overridden by a concrete type in an implementation.
+The *bmi_geo* type is encapsulated in a module, *bmigeof*,
+and built into a library, *libbmigeof*.
